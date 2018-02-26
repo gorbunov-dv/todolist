@@ -1,8 +1,16 @@
 import React from 'react';
 import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {Store} from 'react-chrome-redux';
+import todoApp from './reducers';
 
 import App from './components/app/App';
 
-  render(
+let store = createStore(todoApp)
+
+render(
+  <Provider store={store}>
       <App/>
-    , document.getElementById('app'));
+    </Provider>,
+    document.getElementById('app')
+);
