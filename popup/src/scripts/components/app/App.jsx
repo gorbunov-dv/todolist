@@ -7,8 +7,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        Hello World 1
+      <div className="App">
+        <div className="todo-wraper">
+          <h1>Todo</h1>
+          <input type="text"/>
+          <button>Submit</button>
+        </div>
       </div>
     );
   }
