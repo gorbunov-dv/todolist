@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Header from './Header';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener(() => {
+    document.addEventListener('click', () => {
       this.setState({
         count: this.state.count + 1
       });
@@ -19,8 +20,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        Hello React {this.state.count}
+      <div className="App">
+        <div className="todo-wrapper">
+          <Header />
+          Hello React {this.state.count}
+        </div>
       </div>
     );
   }
