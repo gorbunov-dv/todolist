@@ -12,7 +12,7 @@ class App extends Component {
   componentDidMount() {
     document.addEventListener(() => {
       this.setState({
-        count: this.state.count + 1;
+        count: this.state.count + 1
       });
     })
   }
